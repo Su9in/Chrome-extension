@@ -3,7 +3,7 @@ body{
     padding:10px;
     color:rgb(0, 121, 207);
     font-family: Helvetica, sans-serif;
-    min-width: 400px;
+    min-width: 500px;
 }
 #input-el{
     outline:none;

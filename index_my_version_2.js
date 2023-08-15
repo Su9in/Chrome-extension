@@ -6,21 +6,16 @@ const tabBtn = document.getElementById("tab-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
 const inputEl = document.getElementById("input-el")
-
-//myLeads = JSON.stringify(myLeads)     array into string
-//myLeads = JSON.parse(myLeads)         string into array
-
-let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"))
-if (leadsFromLocalStorage){
-    myLeads = leadsFromLocalStorage
+if(localStorage.length>0){
+    for (let i=0;i<localStorage.length;i++){
+        myLeads.push(localStorage.getItem(`myLeads${i}`))
+    }
     renderLeads()
 }
-
 inputBtn.addEventListener("click", function(){
     if (!inputEl.value==""){
         myLeads.push(inputEl.value)
         inputEl.value = ""
-        localStorage.setItem("myLeads",JSON.stringify(myLeads))
         renderLeads() 
     }
 })
@@ -28,6 +23,7 @@ inputBtn.addEventListener("click", function(){
 function renderLeads(){
     let listItems = ""
     for(let i=0;i<myLeads.length;i++){
+        localStorage.setItem(`myLeads${i}`,myLeads[i])
         listItems += `
             <li>
                 <a href='${myLeads[i]}' target='_blank'>
@@ -51,7 +47,6 @@ for(let i=0;i<myLeads.length;i++){
 
 tabBtn.addEventListener("click",function(){
     myLeads.push(document.URL)
-    localStorage.setItem("myLeads",JSON.stringify(myLeads))
     renderLeads()
 })
 
