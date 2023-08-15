@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #box-el{
+            cursor: pointer;
+            padding:20px;
+            background-color: lightcoral;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="box-el">Open the box</div>
+    <div id="container"></div>
+    <script>
+        let boxEl = document.getElementById("box-el")
+        boxEl.addEventListener("click",function(){
+            boxEl.textContent = "Box opened"
+            boxEl.style = "box-shadow: inset 0 0 0 10px lightcoral; background-color:black;"
+        })
+
+        const containerDiv = document.getElementById("container")
+        containerDiv.innerHTML="<button id='buy-btn'>Buy</button>"
+        const buyBtn = document.getElementById("buy-btn")
+        buyBtn.addEventListener("click",function(){
+            containerDiv.innerHTML+="<p>Thank you!</p>"
+        })
+
+
+        //templed strings ################
+        const recipient = "James"
+        const sender = Peter
+        const email = `
+            Hey ${recipient}! 
+            How is it going? 
+            Cheers ${sender}
+        ` 
+        console.log(email)
+
+    </script>
+</body>
+</html>

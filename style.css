@@ -1,0 +1,57 @@
+body{
+    margin:0px;
+    padding:10px;
+    color:rgb(0, 121, 207);
+    font-family: Helvetica, sans-serif;
+    min-width: 400px;
+}
+#input-el{
+    outline:none;
+    /*width:100%      100% + padding = 100% + 10px + 10px*/
+    width:100%;
+    box-sizing: border-box;
+    padding: 10px;
+    color:rgb(0, 121, 207);
+    margin-bottom: 4px;
+}
+#input-el:focus{
+    background-color: azure;
+}
+.border{
+    border: solid 2px rgb(0, 121, 207);
+}
+button{
+    padding: 10px 20px;
+    font-weight: bold;
+    width:150px;
+}
+.add-btn{
+    background-color: rgb(0, 121, 207);
+    color:white;
+}
+.add-btn:hover{
+    background-color: rgb(0, 92, 157);
+    border: solid 2px rgb(0, 92, 157);
+}
+#delete-btn{
+    background-color: white;
+    color:rgb(0, 121, 207);
+}
+#delete-btn:hover{
+    background-color: azure;
+}
+ul{
+    margin-top: 20px;
+    padding: 0px;
+    list-style-type: none;
+}
+li{
+    color:rgb(0, 121, 207);
+    margin: 6px 0px;
+}
+a{
+    color: rgb(0, 121, 207);
+}
+a:visited{
+    color: rgb(0, 121, 207);
+}
