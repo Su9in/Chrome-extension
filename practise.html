@@ -20,6 +20,7 @@
 <body>
     <div id="box-el">Open the box</div>
     <div id="container"></div>
+    <p id="welcome-el"></p>
     <script>
         let boxEl = document.getElementById("box-el")
         boxEl.addEventListener("click",function(){
@@ -45,6 +46,7 @@
         ` 
         console.log(email)
 
+
         //truthy and falsy values
         /* Truthy 
             if ("asudgkjafh")
@@ -58,7 +60,32 @@
             undefined   -> how JavaScript signalize emptyness
             NaN
 
+
+            czy trythy czy falsy
+
+            let trueOrFalse = Boolean("asdads")
         */
-    </script>
+
+        const welcomeEl = document.getElementById("welcome-el")
+
+        function greetUser(greeting, name, emoji) {
+            welcomeEl.textContent = `${greeting}, ${name} ${emoji}`   
+        }
+        greetUser("Hello","Piotr")
+
+
+        function add(num1, num2){
+            return num1 + num2
+        }
+        console.log(add(8,2))
+
+        function getFirst(arr){
+            return arr[0]
+        }
+        const animals = ["shark","bear","dog"]
+        console.log(getFirst(animals))
+
+
+    </script> 
 </body>
 </html>
